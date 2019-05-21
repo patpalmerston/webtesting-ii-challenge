@@ -12,12 +12,18 @@ describe('<App />', () => {
     cleanup();
   })
 
-  it('renders "Hello World"', () => {
+  it('renders "Game Time"', () => {
     const { getByText } = render(<App />);
-    const text = getByText(/hello world/i);
+    const text = getByText('Game Time!');
 
     expect(text).toBeInTheDocument();
     cleanup();
   })
-})
+
+  it('should increase ballse when button clicked and reset after third ball')
+  const { getByText, getByTestId } = render(<App />)
+  const button = getByTestId('ballsButton');
+  fireEvent.click(button);
+  const buttonResult = getByText
+}) 
 
